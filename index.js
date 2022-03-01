@@ -14,6 +14,7 @@ document.getElementById("suma").addEventListener("click", clickSuma);
 document.getElementById("resta").addEventListener("click", clickResta);
 document.getElementById("division").addEventListener("click", clickDivision);
 document.getElementById("mult").addEventListener("click", clickMultiplicacion);
+document.getElementById("retroceder").addEventListener("click", clickRetroceder);
 
 mousetrap.bind("1", clickUno);
 mousetrap.bind("2", clickDos);
@@ -29,6 +30,7 @@ mousetrap.bind("+", clickSuma);
 mousetrap.bind("-", clickResta);
 mousetrap.bind("/", clickDivision);
 mousetrap.bind("*", clickMultiplicacion);
+mousetrap.bind("backspace", clickRetroceder);
 
 var actualElemento = document.getElementById("numeroActual");
 var resultadoElemento = document.getElementById("resultado");
@@ -122,5 +124,14 @@ function clickMultiplicacion() {
         actual = "";
         actualElemento.innerHTML = "0";
         resultadoElemento.innerHTML = resultado;
+    }
+}
+
+function clickRetroceder() {
+    if (actual != "") {
+        
+        actual = "";
+        actualElemento.innerHTML = "0";
+        resultadoElemento.innerHTML = "0";
     }
 }
