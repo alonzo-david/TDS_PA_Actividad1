@@ -128,10 +128,26 @@ function clickMultiplicacion() {
 }
 
 function clickRetroceder() {
-    if (actual != "") {
-        
-        actual = "";
+        resultado = 0;
+        actual = 0;
         actualElemento.innerHTML = "0";
         resultadoElemento.innerHTML = "0";
-    }
+        removeClick();
+}
+
+function removeClick() {
+    document.getElementById("botonUno").removeEventListener("click", clickUno);
+    document.getElementById("botonDos").removeEventListener("click", clickDos);
+    document.getElementById("botonTres").removeEventListener("click", clickTres);
+    document.getElementById("botonCuatro").removeEventListener("click", clickCuatro);
+    document.getElementById("botonCinco").removeEventListener("click", clickCinco);
+    document.getElementById("botonSeis").removeEventListener("click", clickSeis);
+    document.getElementById("botonSiete").removeEventListener("click", clickSiete);
+    document.getElementById("botonOcho").removeEventListener("click", clickOcho);
+    document.getElementById("botonNueve").removeEventListener("click", clickNueve);
+    document.getElementById("botonCero").removeEventListener("click", clickCero);
+    document.getElementById("suma").removeEventListener("click", clickSuma);
+    document.getElementById("resta").removeEventListener("click", clickResta);
+    document.getElementById("division").removeEventListener("click", clickDivision);
+    document.getElementById("mult").removeEventListener("click", clickMultiplicacion);
 }
